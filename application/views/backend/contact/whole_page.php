@@ -51,7 +51,6 @@
                                                     </div>
                                                      <?php }?>
                                                     <tbody>
-                                                    <?php if (!empty($messages)) {?>
                                                     <?php foreach ($messages as $message) { ?>
                                                         <tr>
                                                                 <td class="small-cell v-align-middle">
@@ -73,14 +72,10 @@
                                                                 </td>
 
                                                             <td class="clickable v-align-middle">
-                                                                    <span class="muted"> <?php echo $message["date"]?></span>
+                                                                    <span class="muted">Yesterday</span>
                                                                 </td>
                                                         </tr>
                                                         <?php } ?>
-
-                                                    <?php }else{ ?>
-                                                        <p style="text-align:center;     font-size: 25px;  margin-top: 10px; " >Mesaj yoxdur</p>
-                                                    <?php } ?>
                                                     </tbody>
                                                 </table>
                                             </div>

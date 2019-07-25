@@ -15,7 +15,7 @@
 
 
 <!--                            portfoliolarin listi-->
-<table class="table no-more-tables table-bordered table-hover">
+<table class="table no-more-tables table-bordered">
 
     <!--                                tablenin basliqi-->
     <thead>
