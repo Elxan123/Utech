@@ -1,24 +1,6 @@
 
 
-						<div class="col-xl-2 col-lg-3 text-lg-left text-xl-right d-none d-lg-block">
-							<div class="header_phone">
-								<h6>
-									<span>1-800</span>-123-4567
-								</h6>
-							</div>
-						</div>
-						<!-- <div class="search_modal affix-top">
-                <a href="#" class="search_modal_button header-button">
-                    <i class="fa fa-search"></i>
-                </a>
-            </div> -->
-					</div>
-				</div>
-				<!-- header toggler -->
-				<span class="toggle_menu">
-					<span></span>
-				</span>
-			</header>
+
 
 
 			<section class="page_title ls s-py-50 corner-title ls invise overflow-visible">
@@ -30,7 +12,9 @@
 								<li class="breadcrumb-item">
 									<a href="<?php echo base_url('Home') ?>">Home</a>
 								</li>
-
+                                <li class="breadcrumb-item">
+                                    <a href="<?php echo base_url('utech_admin_panel_services') ?>">Servisler</a>
+                                </li>
 								<li class="breadcrumb-item active">
 									<?php echo $single['service_name'] ?>
 
@@ -52,7 +36,7 @@
 							<h6>Diger Servisler</h6>
 							<ul class="list">
                                 <?php foreach ($services as $service) {?>
-								<li>
+								<li class="text-left">
 									<a href="<?php echo base_url('Services/Single/'.$service['id']) ?>"><?php echo $service['service_name'] ?></a>
                                     <?php } ?>
 								</li>
@@ -76,19 +60,16 @@
 										<div class="progress-service">
 											<h6 style="color: darkred">Islerimiz</h6>
                                             <?php foreach ($portfolio as $port) {?>
+                                            <a href="<?php echo base_url('portfolio_single/'.$port['id']) ?>">
+											<p  class="progress-title"><?php echo  $port['name'] ?> </p>
 
-											<p  class="progress-title"><?php echo $port['name'] ?> </p>
-
-                                                <div style="
-     overflow: hidden;
-     text-overflow: ellipsis;
-                                                max-height: 130px"><?php echo $port['desc']?></div>
+                                                <div style=""><?php echo substr($port['desc'],0,500)?></div>
 
 											<div class="progress">
-												<div>
-												</div>
+                                            </a>
+                                                <?php }  ?>
 											</div>
-                                            <?php }  ?>
+
 
 										</div>
 
@@ -117,4 +98,5 @@
 					</div>
 				</div>
 				<div class="d-none d-lg-block divider-50"></div>
+                <br>
 			</section>

@@ -62,10 +62,10 @@
                             <div class="image-upload">
                                 <label for="file-input">
 
-                                    <img src="<?php echo base_url('uploads/services/'.$service['service_img']) ?>" alt="sekil yuklenmedi" />
+                                    <img style="max-width: 500px" src="<?php echo base_url('uploads/services/'.$service['service_img']) ?>" alt="sekil yuklenmedi" />
                                     <p>Deyismek ucun klikleyin</p>
                                 </label>
-                                <input id="file-input" type="file" />
+                                <input id="file-input" type="file" name="service_img" />
                             </div>
 
 
